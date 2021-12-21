@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+         *{margin:0;
+         padding:0;
+        }
+        body{
+            overflow-y: scroll;
+        }
+        header{
+            background-color:darkgoldenrod;
+            width:100%;
+            position:fixed;
+            top:0;
+            margin-bottom:10px;
+        }
+        footer{
+            background-color:darkgoldenrod;
+            width:100%;
+            position:sticky;
+            bottom:0;
+            color:brown;
+            
+        }        
+        .navbar{
+            font-weight: bold;
+            font-size:22px;
+            color:white;
+            background-color:black; 
+            height:50px;
+            width:100%;
+            padding-top:10px;
+            display:flex;
+            flex-direction:row; 
+            justify-content:flex-start;
+        }
+        ul{
+            display: flex;
+           flex-direction: row;
+           margin-left: auto;
+        }
+        li{
+           list-style-type: none;
+           padding:10px;
+           display:flex;
+           flex-direction:row;
+           justify-content:flex-end;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        a{
+            color:brown;
+            text-decoration:none;
+        }
+            .div-container{
+                display:flex;
+                flex-direction:column;
+                justify-content:space-around;
+                margin:5px;
+            }
+            .bg-container{
+                border-radius:10px;
+                height:50vh;
+                display:flex;
+                flex-direction:row;
+                margin-top:5px;
+                justify-content:space-around;
+            }
+            a{
+                color:white;
+                text-decoration:none;
+            }
+            .card-container{
+                background-color:coral;
+                height:250px;
+                width:200px;
+                display:flex;
+                flex-direction:column;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+            .card-container1{
+                background-color:bisque;
+                padding:10px;
+                font-family:monospace;
+                text-align:left;
+                color:coral;
+            }
+            .image-container{
+                text-align:center;
+                height:500px;
+                padding:20px;
+                background-size:100% 100%;
+                background-image: url("./Htmlimages/pexels-vincent-rivaud-2147491.jpg");
+            } 
+            .span-style{
+                color:red;
+            
+            }    
+            #cartResults{
+                display:flex;
+                justify-content:space-around;
+                color: skyblue;
+                background-color:black;
+            }   
+            .image-container1{
+                text-align:center;
+                height:500px;
+                padding:20px;
+                background-size:100% 100%;
+                background-image: url("./Htmlimages/pizza4.jpg");
+            }
+            .image-container2{
+                text-align:center;
+                height:500px;
+                padding:20px;
+                background-size:100% 100%;
+                background-image: url("./Htmlimages/pizza5.jpg");
+            }      
+            .image-container3{
+                text-align:center;
+                height:500px;
+                padding:20px;
+                background-size:100% 100%;
+                background-image: url("./Htmlimages/pizza6.jpg");
+            }
+            .h2pd{
+                padding-left:10px;
+            }
+            .image-container4{
+                text-align:center;
+                height:500px;
+                padding:20px;
+                background-size:100% 100%;
+                background-image: url("./Htmlimages/pizza7.jpg");
+            }
+            .image-container5{
+                text-align:center;
+                height:500px;
+                padding:20px;
+                background-size:100% 100%;
+                background-image: url("./Htmlimages/pizza8.jpg");
+            }
+            b{
+                font-family:monospace;
+                text-align:left;
+            }
+            .button{
+                height:30px;
+                font-size:10px;
+                width:60px;
+                background-color:goldenrod;
+                border-radius:10px;
+                color:aliceblue;
+                border-width:0px;
+            }
+            #Size{
+                color:goldenrod;
+                outline: none;
+                border: 0px;
+            }
+            hr{
+                background-color:goldenrod;
+            }
+            .footer-icons{   
+             display: flex;
+             justify-content: center;
+        }
+        .icon-container{
+            background-color:brown;
+            text-align:center;
+            margin:15px;
+            cursor: pointer;
+            padding:20px;
+            width:20px;
+            border-radius:40px;
+        }
+        i{
+            color:lavender;
+        }
+        .para{
+            color:lavender;
+            font-family:monospace;
+            text-align:center;
+            font-size:20px;
+        }
+        .flex1{
+            display:flex;
+            flex-direction:column;
+            margin-top:55px;
+        }  
+        .button1{
+        margin-top: 10px;
+        padding: 6px 21px;
+        border-radius: 5px;
+        border-width: none;
+        text-decoration: none;
+       
+    } 
+    .btn_Cart{
+        text-decoration: none;
+        background-color:blue;
+        padding:10px,15px;
+        border:0px;
+        border-radius:8px;
+        outline:none;
+    }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+                <img src="./Htmlimages\image.jpg"/>
+                <h2 class="h2pd">Pizza <span class="span-style">Corner</span></h2>
+            <ul class="color-li"> 
+                <li ><a href="./index.html">Home</a></li>
+                <li ><a href="./menu.html">Menu</a></li>
+                <li id="cartbutton"><a href="#cartResults">Cart</a></li>
+                <li><a href="./aboutus.html">About us</a></li>
+                <li><a href="./feedback.html">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="flex1">
+        <div class="div-container">
+            <div class="bg-container">
+                <div class="card-container">
+                    <div class="image-container img">
+                        <p></p>
+                    </div>
+                    <div class="card-container1">
+                        <hr>
+                        <b class="price">Price 199$</b>
+                        <h4 id="name">Farm House</h4>
+                        <p>A classic delight with 100% Real Mozzarella chesse</p><hr>
+                        <label>Size</label>
+                         <select name="Size" id="Size">
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                         </select>
+                        <button type="button" name="button" value="Add to cart" class="button">Add cart</button>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="image-container1 img">
+                    </div>
+                    <div class="card-container1">
+                        <hr>
+                        <b class="price">Price 399$</b>
+                        <h4 id="name">Margherita</h4>
+                        <p class="para-styling">Delightful combination of onion, capsicum, tomato and grilled mushroom</p><hr>
+                        <label>Size</label>
+                         <select name="Size" id="Size">
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                         </select>
+                        <button type="button" name="button" value="Add to cart" class="button">Add cart</button>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="image-container2 img">
+                    </div>
+                    <div class="card-container1">
+                        <hr>
+                        <b class="price">Price 474$</b>
+                        <h4 id="name">Peppy Paneer</h4>
+                        <p>Flavourful trio of juicy paneer, crisp capsicum with spice red papparika</p><hr>
+                        <label>Size</label>
+                         <select name="Size" id="Size">
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                         </select>
+                        <button type="button" name="button" value="Add to cart"  class="button" >Add cart</button>
+                    </div>
+                </div>       
+            
+            </div>
+            <div class="bg-container">
+                <div class="card-container">
+                    <div class="image-container3 img">
+                    </div>
+                    <div class="card-container1">
+                        <hr>
+                        <b class="price">Price 199$</b>
+                        <h4 id="name">Farm House</h4>
+                        <p>A classic delight with 100% Real Mozzarella chesse</p><hr>
+                        <label>Size</label>
+                         <select name="Size" id="Size">
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                         </select>
+                        <button type="button" name="button" value="Add to cart" class="button">Add cart</button>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="image-container4 img">
+                    </div>
+                    <div class="card-container1">
+                        <hr>
+                        <b class="price">Price 399$</b>
+                        <h4 id="name">Margherita</h4>
+                        <p>Delightful combination of onion, capsicum, tomato and grilled mushroom</p><hr>
+                        <label>Size</label>
+                         <select name="Size" id="Size">
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                         </select>
+                        <button type="button" name="button" value="Add to cart" class="button">Add cart</button>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="image-container5 img">
+                    </div>
+                    <div class="card-container1">
+                        <hr>
+                        <b class="price">Price 474$</b>
+                        <h4 id="name">Peppy Paneer</h4>
+                        <p>Flavourful trio of juicy paneer, crisp capsicum with spice red papparika</p><hr>
+                        <label>Size</label>
+                         <select name="Size" id="Size">
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                         </select>
+                        <button type="button" name="button" value="Add to cart" class="button" >Add cart</button>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div id="cartResults">
+           
+        </div>
+        <footer>
+            <section class="footer-icons">
+                <div class="icon-container">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="icon-container">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="icon-container">
+                    <i class="fab fa-instagram"></i>
+                </div> 
+                <div class="icon-container">
+                    <i class="fab fa-google"></i>
+                </div> 
+            </section>
+            <p class="para">Follow Us</p>
+        </footer>
+    </div>
+    </body>
+    <script src="./menu.js"></script>
+</html>
+
+    
+    

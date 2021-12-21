@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+    .rating span { float:right; position:relative; }
+    .rating span input {
+        position:absolute;
+        top:0px;
+        left:0px;
+        opacity:0;
+    }
+    .rating span label {
+        display:inline-block;
+        width:30px;
+        height:30px;
+        text-align:center;
+        color:#FFF;
+        background:#ccc;
+        font-size:30px;
+        margin-right:2px;
+        line-height:30px;
+        border-radius:50%;
+        -webkit-border-radius:50%;
+    }
+    .rating span:hover ~ span label,
+    .rating span:hover label,
+    .rating span.checked label,
+    .rating span.checked ~ span label {
+        background:#F90;
+        color:#FFF;
+    }
+    .flex-rating{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        height:100vh;
+        width: 100vw;
+        flex-direction: column;
+        color:#F90;
+        font-family:monospace;
+    }
+    .button{
+        margin-top: 10px;
+        padding: 6px 21px;
+        border-radius: 5px;
+        border-width: none;
+        text-decoration: none;
+       
+    }
+    .button:hover{
+        background-color:orange;
+    }
+    a{
+        text-decoration:none;
+    }
+    a:hover{
+            text-decoration:underline;
+        }  
+    .error {
+            color:red;
+        } 
+    .button1{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        margin-top: 30px;
+    }    
+    </style>
+    
+</head>
+<body>
+    <div class="flex-rating">
+    <form action= "./succs.html" id="regForm" no validate> <!--novalidate: to stop browser's implicit validation-->
+        <table >
+            <h1>Payment Process</h1>
+            <tr><td><label for = "Address">Address</label> </td>
+            <td><input type= "text" id = "Address"  name="Address"></td></tr>
+            <tr><td></td><td id = "error2" class="error"></td></tr>
+            <tr><td><label for = "Mobile">Mobile Number:</label> </td>
+                <td><input type= "text" id = "mobile"  name="Mobile" >  </td></tr>
+                <tr><td></td><td id = "error7" class="error"></td></tr>
+            <tr><td><label for = "Payment">Payment process</label> </td>
+            <td><input type= "text" id = "Payment"  name="Payment" >  </td></tr>
+            <tr><td></td><td id = "error3" class="error"></td></tr>
+        <tr><td></td><td><input type="submit" value="Pay Now">
+    </table>
+    </form>
+   
+        <h1>Give Your Valuable Rating</h1>
+        <div class="rating">
+            <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
+            <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
+            <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
+            <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
+            <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
+        </div>
+            <div class="button1">
+                <button class="button"><a href="./pizza.html">Submit</a></button> 
+            </div>
+    </div>
+    <script>
+        let AddressNode = $("#Address");
+        let mobileNode = $("#mobile");
+        let PaymentNode = $("#Payment");
+        let  tdNode7 = $("#error7");
+        let  tdNode2 = $("#error2");
+        let  tdNode3 = $("#error3");
+        let formNode=$("#regForm");
+        let border1 = "2px solid red";
+        let border2 = "2px solid green";
+        $(document).ready(function() {
+            AddressNode.blur(()=>validate1());
+            mobileNode.blur(()=>validate2());
+            PaymentNode.blur(()=>validate3());
+            formNode.submit(()=>validateForm());
+        });
+        
+function validate1() {
+    tdNode2.text("");
+    let regExp = new RegExp("^[A-Za-z]*$");
+    let lname = AddressNode.val();
+    if (lname == '') {
+         tdNode2.text("this field is  required");
+       AddressNode.css('border',border1);
+        return false;
+    }
+    else {
+        AddressNode.css('border',border2);
+        return true;
+    }
+
+}
+function validate2() {
+    let mobile = mobileNode.val();
+    let regExp=new RegExp("^[A-Za-z]*$");
+    tdNode7.text("");
+
+    if ( mobile == '') {
+        tdNode7.text("this field is  required");
+        mobileNode.css('border',border1);
+        return false;
+    }
+    else {
+        mobileNode.css('border',border2);
+        return true;
+} 
+}
+function validate3() {
+    tdNode3.text(" ");
+    let uname = PaymentNode.val();
+    if (uname == '') {
+         tdNode3.text("this field is  required");
+         PaymentNode.css('border',border1);
+        return false;
+    }
+    else {
+        PaymentNode.css('border',border2);
+       return true;
+    }
+}
+function validateForm(){
+    let st1=validate1();
+    let st2=validate2();
+    let st3=validate3();
+    return st1 && st2 && st3;
+}
+    </script>
+
+</body>
+</html>

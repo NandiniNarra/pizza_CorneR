@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        *{ margin:0;
+            padding:0;
+        }
+        header{
+            width:100%;
+            position:fixed;
+            top:0;
+        }
+        footer{
+            background-color: darkgoldenrod;
+            width: 100vw;
+            position: fixed;
+            bottom: 0;
+            color: brown;
+            display: flex;
+            flex-direction: column-reverse;
+        }      
+        .navbar{
+            font-weight: bold;
+            font-size:22px;
+            color:white;
+            background-color:black; 
+            height:50px;
+            width:100%;
+            padding-top:10px;
+            display:flex;
+            flex-direction:row; 
+            justify-content:flex-start;
+        }
+        ul{
+            display: flex;
+           flex-direction: row;
+           margin-left: auto;
+        }
+        li{
+           list-style-type: none;
+           padding:10px;
+           display:flex;
+           flex-direction:row;
+           justify-content:flex-end;
+           color:white !important;
+        }
+        a{
+            color:brown;
+            text-decoration:none;
+        }
+        .footer-icons{
+            display: flex;
+            justify-content: center;
+        }
+        .icon-container{
+            background-color:brown;
+            text-align:center;
+            margin:15px;
+            padding:20px;
+            width:20px;
+            cursor: pointer;
+            border-radius:40px;
+        }
+        i{
+            color:lavender;
+        }
+        a{
+            color:white;
+        }
+        .background-container{
+            background-color:black;
+            height:50vh;
+            color:orange;
+            font-family:"Roboto";
+            font-size:20px;
+            margin-top:20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .span-style{
+            color:red;
+            /* background-color:gray; */
+        }
+        .heading{
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        img{
+            margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="./Htmlimages\image.jpg"/>
+            <h2 class="h2pd">Pizza <span class="span-style">Corner</span></h2>
+            <ul class="color-li"> 
+                <li ><a href="./index.html">Home</a></li>
+                <li ><a href="./menu.html">Menu</a></li>
+                <li class="shopping-cart" ><a href="#">Cart</a></li>
+                <li><a href="./aboutus.html">About us</a></li>
+                <li><a href="./feedback.html">Payment</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <div class="background-container"> 
+        <h1 class="heading">About Us</h1>
+        <p>Pizza is one of the most popular foods in the world, and for good reason! It’s affordable, delicious, and there’s an option for everyone. Our customers are our neighbors as we are residents of our market area.  We will also create and nurture a healthy, creative, respectful, and fun working environment, in which our employees are fairly compensated and encouraged to respect the customer and the quality of the product we produce.  We seek fair and responsible profit, enough to keep the company financially healthy for the long term and to fairly compensate owners and investors for their investment and risk.</p><br>
+        <p>We are sensitive to the look and taste of good pizza as well as to high-quality ingredients.  We look to provide the best possible value to our customers who desire great tasting pizza and to provide customers with the satisfaction of receiving a great value, both tangibly and intangibly.  Additionally, we are the first home-deliverer of pizzas in our area</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBZ75AL9VVHbkrgOaei5ROiFqsLs0Ja26k_g&usqp=CAU" height="180px" width="180px"/>
+    </div>
+</body>
+</html>

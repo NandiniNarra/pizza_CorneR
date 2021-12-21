@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+        *{margin:0;
+         padding:0;
+        }
+        header{
+            width:100%;
+            position:fixed;
+            top:0;
+        }
+        footer{
+            background-color: darkgoldenrod;
+            width: 100vw;
+            position: fixed;
+            bottom: 0;
+            color: brown;
+            display: flex;
+            flex-direction: column-reverse;
+        }      
+        .navbar{
+            font-weight: bold;
+            font-size:22px;
+            color:white;
+            background-color:black; 
+            height:50px;
+            width:100%;
+            padding-top:10px;
+            display:flex;
+            flex-direction:row; 
+            justify-content:flex-start;
+        }
+        ul{
+            display: flex;
+           flex-direction: row;
+           margin-left: auto;
+        }
+        h1{
+            color:cornsilk;
+            text-align:center;
+            /* padding:50px; */
+            /* font-size:30px; */
+        }
+        li{
+           list-style-type: none;
+           padding:10px;
+           display:flex;
+           flex-direction:row;
+           justify-content:flex-end;
+           color:white !important;
+        }
+        a{
+            color:brown;
+            text-decoration:none;
+        }
+        .image{
+            height:100vh;
+            padding:10px;
+            background-size:cover;
+            width:100%;
+            background-image:url("./Htmlimages/pexels-edward-eyer-1049620.jpg");   
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        p{
+            color:cornsilk;
+            font-size:20px;
+            text-align:center;
+            font-family: cursive;
+        }
+        .footer-icons{
+            display: flex;
+            justify-content: center;
+        }
+        .icon-container{
+            background-color:brown;
+            text-align:center;
+            margin:15px;
+            padding:20px;
+            width:20px;
+            cursor: pointer;
+            border-radius:40px;
+        }
+        i{
+            color:lavender;
+        }
+        a{
+            color:white;
+        }
+        .para{
+            margin-top:25px;
+            text-align: center;
+        }
+        .h2pd{
+            padding-left:10px;
+        }
+        .span-style{
+            color:red;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="./Htmlimages/image.jpg"/>
+            <h2 class="h2pd">Pizza <span class="span-style">Corner</span></h2>
+            <ul class="color-li"> 
+                <li ><a href="#">Home</a></li>
+                <li ><a href="./menu.html">Menu</a></li>
+                <li class="shopping-cart" ><a href="#">Cart</a></li>
+                <li><a href="./aboutus.html">About us</a></li>
+                <li><a href="./feedback.html">Payment</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="image">
+        <h1>Welcome to Our Pizza Corner </h1>
+        <p>Exclusive Christmas offers!!!!</p>
+    </div>
+    <footer>
+        <section class="footer-icons">
+            <section class="icon-container">
+            
+                <i class="fab fa-facebook-f"></i>
+            </section>
+            <section class="icon-container">
+                <i class="fab fa-twitter"></i>
+            </section>
+            <section class="icon-container">
+                <i class="fab fa-instagram"></i>
+            </section> 
+            <section class="icon-container">
+                <i class="fab fa-google"></i>
+            </section> 
+        </section>
+        <p class="para">Follow Us</p>
+    </footer>
+</body>
+</html>
